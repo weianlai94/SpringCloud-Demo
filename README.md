@@ -1,2 +1,2 @@
 # SpringCloud-Demo
-* Eurka 服务注册与发现
+* Eureka 服务注册与发现
