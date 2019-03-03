@@ -12,7 +12,13 @@ import java.util.List;
  * @author weianlai
  * @date 2019/03/2019/3/3 14:30
  */
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+
+/**
+ * @Description: 修改microservicecloud-api工程，根据已经有的DeptClientService接口
+ * 新建一个实现了FallbackFactory接口的类DeptClientServiceFallbackFactory
+ */
+//@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+@FeignClient(value = "MICROSERVICECLOUD-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
